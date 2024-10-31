@@ -18,7 +18,7 @@ function Navigation() {
 
   return (
     <nav className="flex justify-between items-center p-4 max-h-20 text-black bg-white">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center w-[300px]">
         <span className="p-1 w-[61px] h-full">
           <img
             src={MarianneLogo}
@@ -54,7 +54,7 @@ function Navigation() {
         <h3>This is a ad, please don&apos;t mind it.</h3>
       </div>
 
-      <div className="flex justify-center items-center space-x-6">
+      <div className="flex justify-center items-center space-x-6 w-[252px]">
         <button className="flex justify-center items-center h-14 text-xs uppercase">
           <span>
             <img src={UserIcon} alt="User" className="w-8 h-8" />

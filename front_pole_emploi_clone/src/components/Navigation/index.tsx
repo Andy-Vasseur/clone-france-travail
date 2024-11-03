@@ -17,7 +17,7 @@ function Navigation() {
   };
 
   return (
-    <nav className="flex justify-between items-center p-4 max-h-20 text-black bg-white">
+    <nav className="flex justify-between items-center px-2 py-4 max-h-20 text-black bg-white">
       <div className="flex justify-center items-center w-[300px]">
         <span className="p-1 w-[61px] h-full">
           <img
@@ -50,7 +50,7 @@ function Navigation() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center w-[467px] border-2 border-black">
+      <div className="flex justify-center items-center w-[467px] h-[60px] border-2 border-black">
         <h3>This is a ad, please don&apos;t mind it.</h3>
       </div>
 

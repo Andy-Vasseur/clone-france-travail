@@ -9,7 +9,7 @@ import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App text-[#414042]">
       <Navigation />
       <Routes>
         <Route path="/" element={<Homepage />} />

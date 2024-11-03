@@ -39,7 +39,7 @@ function Wrapper() {
       {/* Main content */}
       <div className="absolute text-center z-10 top-[15%] left-1/2 transform -translate-x-1/2 w-full max-w-[850px] px-4">
         {/* Number of offers available */}
-        <h1 className="text-4xl font-semibold text-white drop-shadow-md">
+        <h1 className="text-4xl font-medium text-white drop-shadow-md">
           1 156 252 offres d'emploi disponibles
         </h1>
 
@@ -87,7 +87,7 @@ function Wrapper() {
               key={index}
               className="flex flex-col items-center text-center text-white group rounded-full"
             >
-              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#FF5950] group-hover:scale-105 transition transform duration-300">
+              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#FF5950] transition transform duration-300 group-hover:scale-105">
                 <img src={link.icon} alt={link.text} className="w-12 h-12" />
               </div>
               <span className="mt-2 text-xs w-32 text-center">{link.text}</span>

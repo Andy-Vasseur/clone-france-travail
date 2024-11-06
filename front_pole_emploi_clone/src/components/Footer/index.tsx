@@ -70,16 +70,19 @@ function Footer() {
 
   return (
     <footer>
-      <div className="grid grid-cols-4 py-4 px-2 h-[400px] bg-[#2B2E30]">
+      <div className="grid grid-cols-4 place-items-center py-10 px-6 bg-[#2B2E30]">
         {/* first column */}
-        <div className="flex flex-col justify-center items-center h-full w-64">
-          <h3 className="text-white text-xs uppercase">
-            Autres sites France Travail
-          </h3>
-          <ul className="w-[288px] text-white">
+        <div className="flex flex-col items-center h-full w-64">
+          <div className="h-[30px] mb-4">
+            <h3 className="text-white text-xs uppercase">
+              Autres sites France Travail
+            </h3>
+            <span className="relative left-2/4 inline-block -ml-[30px] w-[60px] h-1 bg-black" />
+          </div>
+          <ul className="flex flex-col w-full leading-[1.42857] text-white">
             {otherSitesLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.link} className="text-[13px]">
+                <a href={link.link} className="text-[12px] hover:underline">
                   {link.name}
                 </a>
               </li>
@@ -88,12 +91,17 @@ function Footer() {
         </div>
 
         {/* second column */}
-        <div className="flex flex-col justify-center items-center h-full w-64">
-          <h3 className="text-white text-xs uppercase">France Travail</h3>
-          <ul className="w-[288px] text-white">
+        <div className="flex flex-col items-center h-full w-64">
+          <div className="h-[30px] mb-4">
+            <h3 className="text-white text-xs uppercase">
+              Sur FranceTravail.fr
+            </h3>
+            <span className="relative left-2/4 inline-block -ml-[30px] w-[60px] h-1 bg-[#003d7c]" />
+          </div>
+          <ul className="flex flex-col w-full leading-[1.42857] text-[#CCCCCC] list-disc">
             {franceTravailLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.link} className="text-[13px]">
+                <a href={link.link} className="text-[12px] hover:underline">
                   {link.name}
                 </a>
               </li>
@@ -102,12 +110,15 @@ function Footer() {
         </div>
 
         {/* third column */}
-        <div className="flex flex-col justify-center items-center h-full w-64">
-          <h3 className="text-white text-xs uppercase">Candidat</h3>
-          <ul className="w-[288px] text-white">
+        <div className="flex flex-col items-center h-full w-64">
+          <div className="h-[30px] mb-4">
+            <h3 className="text-white text-xs uppercase">Candidat</h3>
+            <span className="relative left-2/4 inline-block -ml-[30px] w-[60px] h-1 bg-[#ff5950]" />
+          </div>
+          <ul className="flex flex-col w-full leading-[1.42857] text-[#CCCCCC] list-disc">
             {candidateLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.link} className="text-[13px]">
+                <a href={link.link} className="text-[12px] hover:underline">
                   {link.name}
                 </a>
               </li>
@@ -116,12 +127,15 @@ function Footer() {
         </div>
 
         {/* fourth column */}
-        <div className="flex flex-col justify-center items-center h-full w-64">
-          <h3 className="text-white text-xs uppercase">Employeur</h3>
-          <ul className="w-[288px] text-white">
+        <div className="flex flex-col items-center h-full w-64">
+          <div className="h-[30px] mb-4">
+            <h3 className="text-white text-xs uppercase">Employeur</h3>
+            <span className="relative left-2/4 inline-block -ml-[30px] w-[60px] h-1 bg-[#599d78]" />
+          </div>
+          <ul className="flex flex-col w-full leading-[1.42857] text-[#CCCCCC] list-disc">
             {employerLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.link} className="text-[13px]">
+                <a href={link.link} className="text-[12px] hover:underline">
                   {link.name}
                 </a>
               </li>
@@ -140,9 +154,9 @@ function Footer() {
           Retour en haut
         </button>
 
-        <span className="after:block after:w-[50px] after:pt-[25px] after:m-auto after:border-b-2 after:border-[#d1d3d4]" />
+        <span className="after:block after:w-[80px] after:pt-[25px] after:m-auto after:border-b-[1px] after:border-[#d1d3d4]" />
 
-        <p className="mt-6 text-white text-sm">
+        <p className="mt-6 text-[#C2C3C4] text-sm">
           Copyright 2024 © France Travail
         </p>
       </div>

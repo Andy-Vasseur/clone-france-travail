@@ -2,6 +2,16 @@
 import { Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 
+// Components
+import Footer from "../../components/Footer";
+
+// Icons
+import InfoIcon from "/icons/info.svg";
+import CheckListIcon from "/icons/checklist.svg";
+import CalculatorIcon from "/icons/calculator.svg";
+import WalletIcon from "/icons/wallet.svg";
+import LightbulbIcon from "/icons/lightbulb.svg";
+
 function Homepage() {
   const news = [
     {
@@ -174,25 +184,26 @@ function Homepage() {
         <div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {news.map((item, index) => (
-              <li key={index} className="grid grid-cols-1 shadow-custom">
+              <li
+                key={index}
+                className="grid grid-cols-1 shadow-custom transition-all duration-200 ease-in-out hover:scale-95"
+              >
                 <Link
                   to={item.link}
                   className="flex flex-col justify-between w-full h-[400px] max-h-[400px] bg-white"
                 >
-                  <div className="py-4 px-6 ">
-                    <h3 className=" text-[#1c3f55] text-[22px] font-normal">
+                  <div className="py-4 px-6 text-inherit">
+                    <h3 className="text-[22px] leading-[1.1] font-normal">
                       {item.name}
                     </h3>
-                    <p className="mb-[9px] text-sm text-gray-500">
-                      {item.description}
-                    </p>
+                    <p className="my-[9px] text-sm">{item.description}</p>
                   </div>
                   <div
-                    className="w-full h-[200px] bg-[#e5e9ec]"
+                    className="w-full h-[180px] bg-[#e5e9ec]"
                     title={item.name}
                   >
                     <img
-                      src={item.image}
+                      src={item.image || "https://via.placeholder.com/308x188"}
                       alt={item.name}
                       className="w-full h-full object-cover"
                     />
@@ -200,9 +211,125 @@ function Homepage() {
                 </Link>
               </li>
             ))}
+            {/* three more cards */}
+            <li className="grid grid-cols-1 shadow-custom">
+              <div className="cursor-default flex flex-col justify-between w-full h-[400px] max-h-[400px] bg-[#934C94]">
+                <div className="p-6 text-white text-center">
+                  <h3 className="text-3xl leading-[1.1] font-medium">
+                    Mode d&apos;emploi
+                  </h3>
+                  <p className="my-[9px] text-md">Votre newsletter mensuelle</p>
+                </div>
+
+                {/* card links buttons */}
+                <div>
+                  <Link
+                    to="#"
+                    className="cursor-pointer flex justify-center items-center px-7 w-full h-[83px] bg-[#582E59] hover:bg-[#492649] hover:underline hover:underline-offset-4 decoration-white"
+                  >
+                    <p className="flex justify-between items-center w-full text-[17px] text-white ">
+                      Mode d&apos;emploi - Octobre #141
+                      <span>
+                        <img src={CheckListIcon} alt="" />
+                      </span>
+                    </p>
+                  </Link>
+                  <Link
+                    to="#"
+                    className="cursor-pointer flex justify-center items-center px-7 w-full h-[83px] bg-[#492649] hover:underline hover:underline-offset-4 decoration-white"
+                  >
+                    <p className="flex justify-between items-center w-full text-[17px] text-white ">
+                      Abonnement et anciens numéros
+                      <span>
+                        <img src={InfoIcon} alt="" />
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </li>
+
+            <li className="grid grid-cols-1 shadow-custom">
+              <div className="cursor-default flex flex-col justify-between w-full h-[400px] max-h-[400px] bg-[#223D5B]">
+                <div className="p-6 text-white text-center">
+                  <h3 className="text-3xl leading-[1.1] font-medium">
+                    Guide des simulateurs d&apos;allocations et aides
+                  </h3>
+                  <p className="my-[9px] text-md">Votre newsletter mensuelle</p>
+                </div>
+
+                {/* card links buttons */}
+                <div>
+                  <Link
+                    to="#"
+                    className="cursor-pointer flex justify-center items-center px-7 w-full h-[83px] bg-[#142537] hover:bg-[#111E2D] hover:underline hover:underline-offset-4 decoration-white"
+                  >
+                    <p className="flex justify-between items-center w-full text-[17px] text-white ">
+                      Guide et simulateurs
+                      <span>
+                        <img src={CalculatorIcon} alt="" />
+                      </span>
+                    </p>
+                  </Link>
+                  <Link
+                    to="#"
+                    className="cursor-pointer flex justify-center items-center px-7 w-full h-[83px] bg-[#111E2D] hover:underline hover:underline-offset-4 decoration-white"
+                  >
+                    <p className="flex justify-between items-center w-full text-[17px] text-white ">
+                      Comprendre le calcul
+                      <span>
+                        <img src={WalletIcon} alt="" />
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </li>
+
+            <li className="grid grid-cols-1 shadow-custom">
+              <div className="cursor-default flex flex-col justify-between w-full h-[400px] max-h-[400px] bg-[#223D5B]">
+                <div className="p-6 text-white text-center">
+                  <h3 className="text-3xl leading-[1.1] font-medium">
+                    Je donne mon avis
+                  </h3>
+                  <p className="my-[9px] text-md">
+                    Pour des services publics plus proches, plus simples et plus
+                    efficaces.
+                  </p>
+                </div>
+
+                {/* card links buttons */}
+                <div>
+                  <Link
+                    to="#"
+                    className="cursor-pointer flex justify-center items-center px-7 w-full h-[83px] bg-[#111E2D] hover:underline hover:underline-offset-4 decoration-white"
+                  >
+                    <p className="flex justify-between items-center w-full text-[17px] text-white ">
+                      Partager votre expérience
+                      <span>
+                        <img src={LightbulbIcon} alt="" />
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
+
+        {/* more news button */}
+        <div className="flex justify-center my-8">
+          <Link
+            to="#"
+            className="pt-2 pb-[7px] px-4 min-h-[34px] text-[#737679] text-[11px] font-normal uppercase border border-[#737679] rounded-full bg-white transition-colors duration-200 ease-in-out hover:text-white hover:bg-[#737679]"
+          >
+            Plus d&apos;actualités
+          </Link>
+        </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
